@@ -15,8 +15,8 @@ class NESController : public Component {
   void set_clock_pin(uint8_t clock_pin);
   void set_latch_pin(uint8_t latch_pin);
 
-  void set_a_button_sensor(binary_sensor::BinarySensor *a_button_sensor) { this->a_button_sensor = a_button_sensor; };
-  void set_b_button_sensor(binary_sensor::BinarySensor *b_button_sensor) { this->b_button_sensor = b_button_sensor; };
+  void set_a_button_sensor(binary_sensor::BinarySensor *a_button_sensor) { this->a_button_sensor = set_a_button_sensor; };
+  void set_b_button_sensor(binary_sensor::BinarySensor *b_button_sensor) { this->b_button_sensor = set_b_button_sensor; };
   // ... Define sensors for other buttons ...
 
  private:
