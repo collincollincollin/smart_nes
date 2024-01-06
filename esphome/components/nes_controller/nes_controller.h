@@ -21,6 +21,24 @@ class NESController : public Component {
   void set_b_button_sensor(binary_sensor::BinarySensor *sensor) {
         this->b_button_sensor = sensor;
   }
+  void set_select_button_sensor(binary_sensor::BinarySensor *sensor) {
+        this->select_button_sensor = sensor;
+  }
+  void set_start_button_sensor(binary_sensor::BinarySensor *sensor) {
+        this->start_button_sensor = sensor;
+  }
+  void set_up_button_sensor(binary_sensor::BinarySensor *sensor) {
+        this->up_button_sensor = sensor;
+  }
+  void set_down_button_sensor(binary_sensor::BinarySensor *sensor) {
+        this->down_button_sensor = sensor;
+  }
+  void set_left_button_sensor(binary_sensor::BinarySensor *sensor) {
+        this->left_button_sensor = sensor;
+  }
+  void set_right_button_sensor(binary_sensor::BinarySensor *sensor) {
+        this->right_button_sensor = sensor;
+  }
   // ... Define sensors for other buttons ...
 
  private:
@@ -30,6 +48,12 @@ class NESController : public Component {
   
   binary_sensor::BinarySensor *a_button_sensor;
   binary_sensor::BinarySensor *b_button_sensor;
+  binary_sensor::BinarySensor *select_button_sensor;
+  binary_sensor::BinarySensor *start_button_sensor;
+  binary_sensor::BinarySensor *up_button_sensor;
+  binary_sensor::BinarySensor *down_button_sensor;
+  binary_sensor::BinarySensor *left_button_sensor;
+  binary_sensor::BinarySensor *right_button_sensor;
 
   byte read_nes_controller();
   void pulse_pin(uint8_t pin);

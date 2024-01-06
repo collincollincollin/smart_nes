@@ -20,6 +20,12 @@ void NESController::loop() {
 
   this->a_button_sensor->publish_state(!bitRead(nes_register, 0));
   this->b_button_sensor->publish_state(!bitRead(nes_register, 1));
+  this->select_button_sensor->publish_state(!bitRead(nes_register, 2));
+  this->start_button_sensor->publish_state(!bitRead(nes_register, 3));
+  this->up_button_sensor->publish_state(!bitRead(nes_register, 4));
+  this->down_button_sensor->publish_state(!bitRead(nes_register, 5));
+  this->left_button_sensor->publish_state(!bitRead(nes_register, 6));
+  this->right_button_sensor->publish_state(!bitRead(nes_register, 7));
   // ... Publish state for other buttons ...
 
   // delay(180);  // Slight delay to prevent spam
