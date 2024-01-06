@@ -22,7 +22,7 @@ void NESController::loop() {
   this->b_button_sensor->publish_state(!bitRead(nes_register, 1));
   // ... Publish state for other buttons ...
 
-  delay(180);  // Slight delay to prevent spam
+  // delay(180);  // Slight delay to prevent spam
 }
 
 void NESController::set_data_pin(uint8_t data_pin) {
@@ -54,9 +54,9 @@ byte NESController::read_nes_controller() {
 
 void NESController::pulse_pin(uint8_t pin) {
   digitalWrite(pin, HIGH);
-  delayMicroseconds(12);
+  delayMicroseconds(5);
   digitalWrite(pin, LOW);
-  delayMicroseconds(12);
+  delayMicroseconds(5);
 }
 
 }  // namespace nes_controller
