@@ -1,4 +1,4 @@
-#include "read_nes_controller.h"
+#include "nes_controller.h"
 #include "esphome/core/log.h"
 
 namespace esphome {
