@@ -45,9 +45,9 @@ NESController = nes_controller_ns.class_('NESController', cg.Component)
 
 CONFIG_SCHEMA = cv.Schema({
     cv.GenerateID(): cv.declare_id(NESController),
-    cv.Required(DATA_PIN): cv.string,
-    cv.Required(CLOCK_PIN): cv.string,
-    cv.Required(LATCH_PIN): cv.string,
+    cv.Required(DATA_PIN): cv.int_,
+    cv.Required(CLOCK_PIN): cv.int_,
+    cv.Required(LATCH_PIN): cv.int_,
     cv.Optional(A_BUTTON): binary_sensor.BINARY_SENSOR_SCHEMA,
     cv.Optional(B_BUTTON): binary_sensor.BINARY_SENSOR_SCHEMA,
     # ... Add schema entries for other buttons ...
