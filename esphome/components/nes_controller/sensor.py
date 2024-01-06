@@ -63,8 +63,8 @@ def to_code(config):
 
     if A_BUTTON in config:
         sensor = yield binary_sensor.new_binary_sensor(config[A_BUTTON])
-        cg.add(var.a_button_sensor.set_binary_sensor(sensor))
+        cg.add(var.set_a_button_sensor(sensor))
     if B_BUTTON in config:
         sensor = yield binary_sensor.new_binary_sensor(config[B_BUTTON])
-        cg.add(var.b_button_sensor.set_binary_sensor(sensor))
+        cg.add(var.set_b_button_sensor(sensor))
     # ... Add code generation for other buttons ...
