@@ -12,9 +12,9 @@ B_BUTTON = 'B Button'
 
 CONFIG_SCHEMA = cv.Schema({
   cv.Required(CONF_MY_REQUIRED_KEY): cv.string,
-  cv.Required(DATA_PIN): cv.int_,
-  cv.Required(CLOCK_PIN): cv.int_,
-  cv.Required(LATCH_PIN): cv.int_,
+  cv.Required(DATA_PIN): cv.string,
+  cv.Required(CLOCK_PIN): cv.string,
+  cv.Required(LATCH_PIN): cv.string,
   cv.Optional(CONF_MY_OPTIONAL_KEY, default=10): cv.int_,
   cv.Optional(A_BUTTON, default=10): cv.string,
   cv.Optional(B_BUTTON, default=10): cv.string,
