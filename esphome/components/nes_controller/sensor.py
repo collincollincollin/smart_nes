@@ -7,8 +7,8 @@ CLOCK_PIN = 'clock_pin'
 LATCH_PIN = 'latch_pin'
 
 CONF_MY_OPTIONAL_KEY = 'my_optional_key'
-A_BUTTON = 'A Button'
-B_BUTTON = 'B Button'
+A_BUTTON = 'a_button'
+B_BUTTON = 'b_button'
 
 CONFIG_SCHEMA = cv.Schema({
   cv.Required(DATA_PIN): cv.string,
